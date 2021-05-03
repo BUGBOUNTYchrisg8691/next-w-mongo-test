@@ -1,6 +1,6 @@
 import { connectToDatabase } from "../util/mongodb";
 
-const Top = ({ movies }) => {
+const Thousand = ({ movies }) => {
   return (
     <div>
       <h1>Top 1000 Movies of All-Time</h1>
@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
     .collection("movies")
     .find({})
     .sort({ metacritic: -1 })
-    .limit(100)
+    .limit(1000)
     .toArray();
 
   return {
@@ -37,4 +37,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Top;
+export default Thousand;
