@@ -20,7 +20,7 @@ const Thousand = ({ movies }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const { db } = await connectToDatabase();
 
   const movies = await db
@@ -35,6 +35,6 @@ export const getStaticProps = async () => {
       movies: JSON.parse(JSON.stringify(movies)),
     },
   };
-};
+}
 
 export default Thousand;

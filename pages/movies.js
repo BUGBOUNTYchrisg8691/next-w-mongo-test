@@ -9,7 +9,7 @@ const Movies = ({ movies }) => {
       </p>
       <ul>
         {movies.map((movie) => (
-          <li key={movie._id.toString() + "movies"}>
+          <li>
             <h2>{movie.title}</h2>
             <h3>{movie.metacritic}</h3>
             <p>{movie.plot}</p>
